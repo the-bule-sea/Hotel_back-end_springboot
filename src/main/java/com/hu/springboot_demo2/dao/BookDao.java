@@ -30,7 +30,7 @@ public interface BookDao {
 
 
     // @Delete("DELETE FROM bookinfo WHERE BookID = #{bookId}")
-    // 差点就delete了，取消订单
+    // 取消订单功能，差点就delete了，
     @Update("UPDATE bookinfo SET BookStatus = '订单已取消' WHERE BookingID = #{bookingID}")
     void cancelbook(@PathVariable("bookingID") Integer bookingID);
 
